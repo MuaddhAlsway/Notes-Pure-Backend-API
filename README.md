@@ -1,17 +1,40 @@
-# Notes API
+# 📝 Notes API
 
-A simple REST API for managing notes, built with **Node.js** and **Express**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
+</p>
 
 ---
 
-## Project Structure
+## 🚀 Overview
+
+**Notes API** is a lightweight backend application that provides full CRUD operations for managing notes, built with Node.js and Express.
+
+---
+
+## ✨ Features
+
+- ✅ Create notes
+- ✅ Retrieve all notes
+- ✅ Retrieve a single note
+- ✅ Update existing notes
+- ✅ Delete notes
+- ✅ RESTful API architecture
+- ✅ Express Router implementation
+
+---
+
+## 📁 Project Structure
 
 ```
 NotesFolder/
 ├── data/
-│   └── notes.js          # In-memory notes data store
+│   └── notes.js          # In-memory data store
 ├── routes/
-│   └── notes.router.js   # Express router with CRUD endpoints
+│   └── notes.router.js   # CRUD route handlers
 ├── server.js             # App entry point
 ├── package.json
 └── README.md
@@ -19,61 +42,77 @@ NotesFolder/
 
 ---
 
-## Getting Started
+## ⚙️ Installation
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) installed on your machine
-
-### Installation
-
-1. Clone the repository:
-
+**Clone Repository**
 ```bash
-git clone https://github.com/your-username/notes-api.git
+git clone https://github.com/MuaddhAlsway/notes-api.git
 cd notes-api
 ```
 
-2. Install dependencies:
-
+**Install Dependencies**
 ```bash
 npm install
 ```
 
-### Running the Server
+---
 
+## ▶️ Run the Server
+
+Using Node.js:
 ```bash
 node server.js
 ```
 
-Or using the npm start script:
-
+Or using npm:
 ```bash
 npm start
 ```
 
-The server will start at **http://localhost:3000**
+Server URL: **http://localhost:3000**
 
 ---
 
-## API Endpoints
+## 📌 API Endpoints
 
-Base URL: `http://localhost:3000`
-
-| Method | Endpoint      | Description          |
-|--------|---------------|----------------------|
-| GET    | `/`           | Health check         |
-| GET    | `/notes`      | Get all notes        |
-| GET    | `/notes/:id`  | Get a note by ID     |
-| POST   | `/notes`      | Create a new note    |
-| PUT    | `/notes/:id`  | Update a note by ID  |
-| DELETE | `/notes/:id`  | Delete a note by ID  |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/notes` | Get all notes |
+| GET | `/notes/:id` | Get note by ID |
+| POST | `/notes` | Create note |
+| PUT | `/notes/:id` | Update note |
+| DELETE | `/notes/:id` | Delete note |
 
 ---
 
-## Request & Response Examples
+## 📤 Example Requests
 
-### GET /notes
+### Create Note
+```http
+POST /notes
+Content-Type: application/json
+```
+```json
+{
+  "title": "My New Note",
+  "content": "Learning Node.js and Express"
+}
+```
+
+**Response `201`**
+```json
+{
+  "id": 3,
+  "title": "My New Note",
+  "content": "Learning Node.js and Express"
+}
+```
+
+### Get All Notes
+```http
+GET /notes
+```
+**Response `200`**
 ```json
 [
   { "id": 1, "title": "First Note", "content": "This is the first note." },
@@ -81,57 +120,85 @@ Base URL: `http://localhost:3000`
 ]
 ```
 
-### GET /notes/1
-```json
-{ "id": 1, "title": "First Note", "content": "This is the first note." }
+### Update Note
+```http
+PUT /notes/1
+Content-Type: application/json
 ```
-
-### POST /notes
-**Request Body:**
-```json
-{
-  "title": "My New Note",
-  "content": "Some content here"
-}
-```
-**Response (201):**
-```json
-{ "id": 3, "title": "My New Note", "content": "Some content here" }
-```
-
-### PUT /notes/1
-**Request Body:**
 ```json
 {
   "title": "Updated Title"
 }
 ```
-**Response:**
-```json
-{ "id": 1, "title": "Updated Title", "content": "This is the first note." }
-```
 
-### DELETE /notes/1
+### Delete Note
+```http
+DELETE /notes/1
+```
+**Response `200`**
 ```json
-{ "message": "Note deleted", "note": { "id": 1, "title": "First Note", "content": "This is the first note." } }
+{
+  "message": "Note deleted",
+  "note": { "id": 1, "title": "First Note", "content": "This is the first note." }
+}
 ```
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - **Runtime:** Node.js
-- **Framework:** Express v5
-- **Data Storage:** In-memory array (no database)
+- **Framework:** Express.js
+- **Language:** JavaScript (ES6)
+- **Architecture:** REST API
 
 ---
 
-## Notes
+## 📚 Learning Objectives
 
-> Data is stored in memory and will reset every time the server restarts. To persist data, consider integrating a database like MongoDB or SQLite.
+This project was built to practice:
+
+- Express Routing
+- Middleware
+- CRUD Operations
+- RESTful API Design
+- Project Structure Organization
+- Backend Development Fundamentals
 
 ---
 
-## License
+## ⚠️ Notes
 
-ISC
+> This project uses an **in-memory data store** — all data resets when the server restarts.
+
+**Future improvements:**
+- [ ] File System Persistence (`fs`)
+- [ ] MongoDB Integration
+- [ ] Authentication & Authorization
+- [ ] Input Validation
+- [ ] Error Handling Middleware
+
+---
+
+## 👨‍💻 Developer
+
+**Muaadh Alsway**  
+Front-End Developer & Aspiring Backend Engineer
+
+<p>
+  <a href="https://www.linkedin.com/in/muaddh-alsway/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://mustudiolab-main.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  <a href="https://github.com/MuaddhAlsway">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+---
+
+## 📄 License
+
+[ISC](https://opensource.org/licenses/ISC)
