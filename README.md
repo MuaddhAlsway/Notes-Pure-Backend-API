@@ -202,6 +202,4 @@ Front-End Developer & Aspiring Backend Engineer
 
 ---
 
-## 📄 License
 
-[ISC](https://opensource.org/licenses/ISC)
