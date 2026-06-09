@@ -195,6 +195,9 @@ Front-End Developer & Aspiring Backend Engineer
   <a href="https://github.com/MuaddhAlsway">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
+  <a href="https://app.notion.com/p/Simple-Notes-API-Express-CRUD-379e97a262dc8023a834f354053c9c3f?source=copy_link">
+    <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" />
+  </a>
 </p>
 
 ---
